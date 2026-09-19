@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>한중 한국어 공부방</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="logo">🌈</div>
+    <div>
+      <h1>한중 한국어 공부방</h1>
+      <p>중국어로 쉽고 재미있게 한국어를 배워요!</p>
+    </div>
+  </header>
+
+  <section class="welcome">
+    <span>👋 안녕!</span>
+    <b>오늘도 재미있게 한국어를 공부해 볼까요?</b>
+  </section>
+
+  <nav class="tabs">
+    <button class="tab active" data-page="words">📚 단어</button>
+    <button class="tab" data-page="write">✍️ 따라 쓰기</button>
+    <button class="tab" data-page="quiz">🎮 퀴즈</button>
+  </nav>
+
+  <main>
+    <section id="words" class="page active">
+      <div class="section-title">
+        <h2>🌟 오늘의 단어</h2>
+        <div class="level-buttons">
+          <button class="level active" data-level="easy">🐣 쉬워요</button>
+          <button class="level" data-level="middle">🌱 조금 어려워요</button>
+        </div>
+      </div>
+      <div id="wordList" class="word-grid"></div>
+    </section>
+
+    <section id="write" class="page">
+      <div class="section-title">
+        <h2>✍️ 한글 따라 쓰기</h2>
+        <p>글자를 보고 획순을 따라가 보세요!</p>
+      </div>
+      <div class="write-card">
+        <div class="letter-choice" id="letterChoice"></div>
+        <div class="stroke-area">
+          <div id="strokeLetter">가</div>
+          <div id="strokeHint">1번 획부터 차례대로 써요!</div>
+          <div class="progress" id="strokeProgress"></div>
+        </div>
+        <div class="write-buttons">
+          <button id="playStroke">▶️ 획순 다시 보기</button>
+          <button id="clearCanvas">🧹 지우기</button>
+        </div>
+        <canvas id="drawCanvas" width="600" height="300"></canvas>
+        <p class="small">💡 손가락이나 마우스로 직접 따라 써 보세요.</p>
+      </div>
+    </section>
+
+    <section id="quiz" class="page">
+      <div class="section-title">
+        <h2>🎮 재미있는 한국어 퀴즈</h2>
+        <p>한국어 단어의 뜻을 골라 보세요!</p>
+      </div>
+      <div class="quiz-card" id="quizCard"></div>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
